@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Marvel Character</h1>
+
+    <form method="GET" action="/characters/characterId">
+        <select name="selected" size ="1">
+            <option data-th-each="char: ${charMap}" data-th-value="${char.key}" data-th-text="${char.value}"></option>
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
